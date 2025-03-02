@@ -11,7 +11,7 @@ interface EnvVars {
 const envsSchema = joi.object({
     DATABASE_URL: joi.string().required(),
     JWT_SECRET: joi.string().required(),
-    NATS_SERVERS: joi.array().items(joi.string().required()),
+    NATS_SERVERS: joi.array().items(joi.string().required()).required(),
 }).unknown(true);
 
 const { error, value } = envsSchema.validate({

@@ -15,7 +15,7 @@ async function bootstrap() {
       transport: Transport.NATS,
       options: {
         servers: envs.natsServers,
-        name: "auth-ms"
+        name: "Auth Microservice"
       }
     }
   );
@@ -30,6 +30,6 @@ async function bootstrap() {
 
 
   await app.listen();
-  logger.log("Auth MS listen on Nats Server")
+  logger.log("Auth MS is listeninig on NATS")
 }
 bootstrap();
